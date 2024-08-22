@@ -30,6 +30,7 @@ export interface ReactSearchAutocompleteProps<T> {
   maxResults?: number
   placeholder?: string
   autoFocus?: boolean
+  disabled?:boolean
   styling?: DefaultTheme
   resultStringKeyName?: string
   inputSearchString?: string
@@ -60,6 +61,7 @@ export default function ReactSearchAutocomplete<T>({
   inputSearchString = '',
   formatResult,
   showNoResults = true,
+  disabled=false,
   showNoResultsText = 'No results',
   showItemsOnFocus = false,
   maxLength = 0,
@@ -233,6 +235,7 @@ export default function ReactSearchAutocomplete<T>({
             eraseResults={eraseResults}
             autoFocus={autoFocus}
             onFocus={handleOnFocus}
+            disabled={disabled}
             onClear={onClear}
             placeholder={placeholder}
             showIcon={showIcon}

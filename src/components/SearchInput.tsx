@@ -15,6 +15,7 @@ interface SearchInputProps {
   showIcon: boolean
   showClear: boolean
   maxLength: number
+  disabled:boolean
 }
 
 export default function SearchInput({
@@ -28,6 +29,7 @@ export default function SearchInput({
   placeholder,
   showIcon = true,
   showClear = true,
+  disabled,
   maxLength
 }: SearchInputProps) {
   const ref = useRef<HTMLInputElement>(null)
